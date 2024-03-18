@@ -115,23 +115,4 @@ import pandas as pd
 df = pd.read_csv(r'C:\Users\alexf\AmazonWebScraperDataset.csv')
 
 print(df)
-# If uou want to try sending yourself an email (just for fun) when a price hits below a certain level you can try it
-# out with this script
 
-def send_mail():
-    server = smtplib.SMTP_SSL('smtp.gmail.com',465)
-    server.ehlo()
-    #server.starttls()
-    server.ehlo()
-    server.login('AlexTheAnalyst95@gmail.com','xxxxxxxxxxxxxx')
-    
-    subject = "The Shirt you want is below $15! Now is your chance to buy!"
-    body = "Alex, This is the moment we have been waiting for. Now is your chance to pick up the shirt of your dreams. Don't mess it up! Link here: https://www.amazon.com/Funny-Data-Systems-Business-Analyst/dp/B07FNW9FGJ/ref=sr_1_3?dchild=1&keywords=data+analyst+tshirt&qid=1626655184&sr=8-3"
-   
-    msg = f"Subject: {subject}\n\n{body}"
-    
-    server.sendmail(
-        'AlexTheAnalyst95@gmail.com',
-        msg
-     
-    )
